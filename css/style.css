@@ -9,8 +9,7 @@ body {
     header {
         text-align: center;
         padding: 20px 0;
-        background-color: #0073e6;
-        color: white;
+        background-color: #0073e6;        color: #ffffff;
     }
         header h1 {
             margin: 0;
@@ -51,36 +50,80 @@ body {
             margin-left: 20px;
         }
 
-#menu {
+nav { /*Create a navigation bar */
+    background-color: white;
+    padding: 0px 5px;
+}
+
+.menu { /* Create a menu */
     display: inline-block;
     margin: 0pt;
     padding: 0pt;
 }
-    #menu li {
+.menu li { /* Define the menu items */
+    display: block;
+    float: left;
+    margin: 1pt;
+    border: 1px solid black;
+    padding: 3px 10px 3px 10px;
+    background: #858585;
+    white-space: nowrap;
+}
+.menu li a{ /* Define the links inside the lv-1 menu items */
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.menu li:hover{ /* What happens when you hover over a lv-1 menu item */
+    background: #333;
+    font-size: 20px;
+}
+    .menu li ul { /* Define the submenu under a lv-1 menu item */
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+    }
+    .menu li:hover ul { /* The submenu under a lv-1 menu item only shows on hover */
         display: block;
-        float: left;
-        border: 1px solid #ffffff;
-        padding: 5px 10px 5px 15px;
-        color: #ffffff;
+    }
+    .menu li ul li { /* Define the lv-2 menu items */
+        display: block;
+        float: none;
+        margin: 0pt;
+        border: 1px solid black;
+        padding: 3px 10px 3px 10px;
         background: #858585;
         white-space: nowrap;
     }
-        #menu li ul {
+    .menu li ul li a{ /* Define the links inside the lv-2 menu items */
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+    .menu li ul li:hover { /* Define the hover state for lv-2 menu items */
+            background: #b12323;
+            float: none;
+    }
+        .menu li:hover ul li ul { /* Define the submenu under a lv-2 menu item */
             display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #0073e6;
+            padding: 0;
         }
-        #menu li:hover{
-            background:#333;
+        .menu li ul li:hover ul { /* The submenu under a lv-2 menu item only shows on hover */
+            display: block;
+            position: absolute;
+            left: 100%;
+            top: 0;
         }
-            #menu li:hover ul {
-                margin-top: 5pt;
-                display: block;
-                position: absolute;
-            }
-            #menu li:hover li {
-                float: none;
-                font-size: 0.8rem;
-            }
-            #menu li:hover li:hover {
-                background: #333;
-                float: none;
-            }
+        .menu li ul li ul li { /* Define the lv-3 menu items */
+            display: block;
+            float: none;
+            border: 1px solid black;
+            padding: 3px 10px 3px 10px;
+            background: #858585;
+            white-space: nowrap;
+        }
