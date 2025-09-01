@@ -9,7 +9,8 @@ body {
     header {
         text-align: center;
         padding: 20px 0;
-        background-color: #0073e6;        color: #ffffff;
+        background-color: #0073e6;        
+        color: #ffffff;
     }
         header h1 {
             margin: 0;
@@ -33,6 +34,9 @@ body {
         bottom: 0;
         width: 100%;
     }
+#main_body p {
+    padding-top: 20px;
+}
 
 #summary {
     display: inline-block;
@@ -43,7 +47,6 @@ body {
 }
     #summary li {
         display: block;
-        float: left;
     }
         #title {
             margin-top: 50px;
