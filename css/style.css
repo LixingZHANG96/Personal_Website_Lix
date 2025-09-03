@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0pt;
     padding: 0;
     line-height: 1.6;
     background-color: #efe1c4;
@@ -8,7 +7,7 @@ body {
 }
     header {
         text-align: center;
-        padding: 20px 0;
+        padding: 10px 0;
         background-color: #0073e6;        
         color: #ffffff;
     }
@@ -17,16 +16,11 @@ body {
             font-size: 2.5em;
         }
         header p {
-            margin: 10px 0 0;
+            margin: 0px 0 0;
         }
-    div p{
-        border: 20pt;
-        margin-top: 0pt;
-        padding: 0pt 20pt;
-    }
     footer {
         text-align: center;
-        padding: 10px 0;
+        padding: 10px;
         line-height: 0.5;
         background-color: #858585;
         color: white;
@@ -34,9 +28,6 @@ body {
         bottom: 0;
         width: 100%;
     }
-#main_body p {
-    padding-top: 20px;
-}
 
 #summary {
     display: inline-block;
@@ -48,20 +39,24 @@ body {
     #summary li {
         display: block;
     }
-        #title {
-            margin-top: 50px;
-            margin-left: 20px;
-        }
 
+#main_body p {
+    border: 0pt;
+    margin-top: 0pt;
+    padding: 10pt 20pt;
+}
+
+
+/* Definition of the Navigation Bar */
 nav { /*Create a navigation bar */
     background-color: white;
-    padding: 0px 5px;
 }
 
 .menu { /* Create a menu */
     display: inline-block;
-    margin: 0pt;
+    margin: 5pt 0;
     padding: 0pt;
+    white-space: wrap;
 }
 .menu li { /* Define the menu items */
     display: block;
@@ -70,7 +65,6 @@ nav { /*Create a navigation bar */
     border: 1px solid black;
     padding: 3px 10px 3px 10px;
     background: #858585;
-    white-space: nowrap;
 }
 .menu li a{ /* Define the links inside the lv-1 menu items */
     text-decoration: none;
@@ -85,7 +79,6 @@ nav { /*Create a navigation bar */
     .menu li ul { /* Define the submenu under a lv-1 menu item */
         display: none;
         position: absolute;
-        white-space: nowrap;
     }
     .menu li:hover ul { /* The submenu under a lv-1 menu item only shows on hover */
         display: block;
@@ -97,7 +90,6 @@ nav { /*Create a navigation bar */
         border: 1px solid black;
         padding: 3px 10px 3px 10px;
         background: #858585;
-        white-space: nowrap;
     }
     .menu li ul li a{ /* Define the links inside the lv-2 menu items */
         text-decoration: none;
@@ -128,5 +120,74 @@ nav { /*Create a navigation bar */
             border: 1px solid black;
             padding: 3px 10px 3px 10px;
             background: #858585;
-            white-space: nowrap;
         }
+
+        /* Styles for the quadrants container */
+        .quadrants-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 10px;
+            max-width: 800px;
+            /* margin: 40px auto; */
+            padding: 20px;
+            background-color: #fffbe6;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .quadrant {
+            background-color: #f5e6c8;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .quadrant h2 {
+            margin-top: 0;
+            margin-bottom: 0px;
+            font-size: 1.3em;
+            color: #0073e6;
+            align-items: center;
+        }
+
+        .quadrant p {
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+
+            .subsection {
+                align-items: flex-start;
+            }
+
+        .gif-placeholder-ver {
+            display: flex; 
+            flex-direction: column;
+        }
+            .gif-placeholder h3 {
+                margin: 0;
+                padding: 0;
+                font-size: 1.1em;
+                color: #333;
+            }
+
+        .gif-placeholder-hor {
+            display: flex; 
+            flex-direction: row;
+            gap: 12px;
+        }
+
+.void_line {
+    height: 2em;
+    list-style-type: none;
+    border: none;
+    background-color: #efe1c4;
+    padding: 0;
+    margin: 0;
+}
+
