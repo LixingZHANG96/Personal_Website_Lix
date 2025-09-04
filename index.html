@@ -15,14 +15,14 @@
         <ul id="summary">
             <li>
                 <div>
-                    <img src="./images/Wedding_Host.JPG" alt="Lixing Zhang" width="200">
+                    <img src="./multimedia/Wedding_Host.jpg" alt="Lixing Zhang" width="200">
                 </div>
             </li>
             <li>
                 <div id="title">
                     <h1 style="text-align: center;">Lixing Zhang</h1>
                     <p> HiL-Test Engineer for ADAS Systems @ Akkodis </p>
-                    <p> Engineering is changing the world, I am just more than glad to be a contributer. </p>
+                    <p> Engineering is reshaping the world, I am just more than glad to be a contributor of the trend. </p>
                 </div>
             </li>
         </ul>
@@ -36,27 +36,26 @@
                     <li>
                         <a>Reading Notes</a>
                         <ul>
-                            <li style="white-space: wrap;"><a href="/TODO.html">[Winner]Handbuch Assistiertes und Automatisiertes Fahren-4e</a></li>
+                            <li style="white-space: wrap;"><a href="./pages/reading_notes.html">[Winner]Handbuch Assistiertes und Automatisiertes Fahren-4e</a></li>
                         </ul>
                     </li>
-                    <li><a>Some Thoughts</a></li>
+                    <li style="white-space: wrap;"><a href="./pages/personal_thoughts.html">Some Thoughts</a></li>
                     </ul>
             </li>
             <li>
                 <a> Projects</a>
                     <ul>
                     <li>
+                        <a> Domestic Robots </a>
+                            <ul>
+                                <li><a href="/pages/project_LeRobot.html"> LeRobot </a></li>
+                            </ul>
+                    </li>
+                    <li>
                         <a> Eco-Power Prototype </a>
                             <ul>
                             <li><a> Tongji Zeal Eco-Power Team </a></li>
                             <li><a href="https://www.tufast.de/"> TU-fast </a></li>
-                            </ul>
-                    </li>
-                    <li>
-                        <a> Domestic Robots </a>
-                            <ul>
-                                <li class="void_line"></li>
-                                <li><a href="/pages/project_LeRobot.html"> LeRobot </a></li>
                             </ul>
                     </li>
                     <li><a> Electric Hot-Rod Minicar </a></li>
@@ -93,9 +92,24 @@
             <h2>My Career - GHiL Test Engineer</h2>
                 <div class="gif-placeholder-ver">
                     <h3>My working environment: gHiL</h3>
-                    <img src="./images/Fahrzeug_HiL.jpg" alt="gHiL">
+                    <span style="position: relative; display: inline-block;">
+                        <img src="./multimedia/work/Fahrzeug_HiL.jpg" alt="gHiL" style="cursor: help;">
+                        <span class="floating_hint">
+                            gHiL stands for 'Gesamt Hardware-in-the-Loop' in German. It is a test environment where the entire vehicle's electronic systems are simulated and tested together.
+                        </span>
+                    </span>
+                    <script>
+                    document.querySelectorAll('span[style*="display: inline-block"]').forEach(function(el){
+                        el.addEventListener('mouseenter', function(){
+                            el.querySelector('span').style.visibility = 'visible';
+                        });
+                        el.addEventListener('mouseleave', function(){
+                            el.querySelector('span').style.visibility = 'hidden';
+                        });
+                    });
+                    </script></span>
                     <h3>My project: Adaptive Cruise Assist (The Audi Level 2+ ADAS-System)</h3>
-                    <img src="./images/Audi_ACA.jpg" alt="Audi Adaptive Cruise Assist">
+                    <img src="./multimedia/work/Audi_ACA.jpg" alt="Audi Adaptive Cruise Assist">
                     <p>Developing and executing test cases for the HiL system to ensure the functionality and reliability of the Adaptive Cruise Assist system.</p>
                 </div>
             </div>
@@ -103,41 +117,49 @@
             <h2>My Research</h2>
                 <div class="gif-placeholder-ver">
                     <h3>The <a href="https://github.com/huggingface/lerobot" target="_blank">LeRobot</a> from Huggingface</h3>
-                    <img src="./images/SO-101_Robotarms.jpeg" alt="LeRobot Leader and Follower">
+                    <img src="./multimedia/lerobot/lerobot_leader_follower_control.gif" alt="LeRobot Leader and Follower">
                     <p>A low-cost but strong robot designed for easy manipulation tasks.</p>
                     <h3>Its derivative: <a href="https://xlerobot.readthedocs.io/en/latest/index.html#xlerobot" target="_blank">XLeRobot</a></h3>
-                    <img src="./images/XLeRobot_VectorWang.png" alt="XLeRobot Vector Wang">
+                    <img src="./multimedia/lerobot/XLeRobot_VectorWang.png" alt="XLeRobot Vector Wang">
                     <p>Designed by <a href="https://github.com/Vector-Wangel" target="_blank">Vector Wang</a></p>
                 </div>
             </div>
             <div class="quadrant">
             <h2>My Learning</h2>
-                    <div class="gif-placeholder-ver">
+                <div class="gif-placeholder-ver">
                     <h3>Current Reading: Handbuch Assistiertes und Automatisiertes Fahren</h3>
-                    <p><a href="https://link.springer.com/book/10.1007/978-3-658-38486-9" target="_blank"><img src="./images/Handbuch_Assistiertes_und_Automatisiertes_Fahren.jpeg" alt="Handbuch Assistiertes und Automatisiertes Fahren"> </a></p>
+                    <p><a href="https://link.springer.com/book/10.1007/978-3-658-38486-9" target="_blank"><img src="./multimedia/reading/Handbuch_Assistiertes_und_Automatisiertes_Fahren.jpeg" alt="Handbuch Assistiertes und Automatisiertes Fahren"> </a></p>
                 </div>
             </div>
             <div class="quadrant">
             <h2>My Hobbies</h2>
             <div class="subsection">
                 <h3>Miniature Painting and Board Games</h3>
-                <div class="gif-placeholder">
-                <img src="#" alt="Miniature Painting GIF 1" style="display: none;">
-                <img src="#" alt="Miniature Painting GIF 2" style="display: none;">
+                <div class="gif-placeholder-hor">
+                <img src="./multimedia/paintings/banner_saga_miniature.jpg" alt="The Board Game Banner Saga">
+                <img src="./multimedia/paintings/terrorscape_miniature.jpg" alt="The Board Game Terrorscape">
+                </div>
+                <div class="gif-placeholder-hor">
+                <img src="./multimedia/paintings/destinies_death_angle.jpg" alt="Death Angle from Destinies">
+                <img src="./multimedia/paintings/destinies_miniature.jpg" alt="Miniature from Destinies">
                 </div>
             </div>
             <div class="subsection">
                 <h3>FPV-Drones</h3>
-                <div class="gif-placeholder">
-                <img src="#" alt="Other Hobbies GIF 1" style="display: none;">
-                <img src="#" alt="Other Hobbies GIF 2" style="display: none;">
+                <div class="gif-placeholder-ver">
+                <img src="./multimedia/scenaries/Drone_Winter2024.gif" alt="Flying in the open field in Winter 2024">
                 </div>
             </div>
             </div>
         </div>
-
         <p>
             <i>This is my personal website. I am still working on it. I will add more content in the future. If you have any questions or suggestions, please feel free to contact me.</i>
+        </p>
+        <p>
+            Last updated: September 2025
+        </p>
+        <p>
+            <i>Website designed and maintained by Lixing Zhang.</i>
         </p>
     </div>
     <footer>
