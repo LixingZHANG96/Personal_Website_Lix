@@ -29,3 +29,4 @@ The LeKiWi is a mobile manipulator robot platform developed by [LeRobot](https:/
     3. The Raspberry Pi and necessary accessories. TODO_Pic
     4. 2 cameras. TODO_Pic
     5. The extra parts for the LeKiWi base. TODO_Pic
+        - The distance column is 3D-printed. TODO_Pic
