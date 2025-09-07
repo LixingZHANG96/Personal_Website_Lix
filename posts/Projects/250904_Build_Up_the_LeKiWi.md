@@ -4,9 +4,11 @@
 
 ## Overview
 The LeKiWi is a mobile manipulator robot platform developed by [LeRobot](https://huggingface.co/docs/lerobot/en/lekiwi). It consists of a mobile base and a 6-DoF robotic arm, the [SO101](https://huggingface.co/docs/lerobot/en/so101).
+
 ### Works done so far
 - The LeRobot follower arm has been built and tested. [details](./250817_Set_Up_the_Follower_Arm.md)
 - The LeRobot leader-follower control system has been implemented and tested. [details](./250824_Wired_Leader_Follower_Control.md)
+
 ### Objectives
 - Build up the LeKiWi robot platform. 
     - It should be able to move.
@@ -18,7 +20,7 @@ The LeKiWi is a mobile manipulator robot platform developed by [LeRobot](https:/
 
     [The official CAD files for LeKiWi](https://a360.co/4k1P8yO) is constructed in [Fusion 360](https://www.autodesk.com/products/fusion-360/overview).
 
-    ![LeKiWi CAD Overview](../../../multimedia/lerobot/LeKiWi_CAD_Overview.png)
+    ![LeKiWi CAD Overview](../../multimedia/lerobot/LeKiWi_CAD_Overview.png)
 - **Bill of Materials (BOM) and 3D-Printing Parts:**
     - [LeKiWi BOM](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/BOM.md)
     - [3D-Printing Parts](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrinting.md)
