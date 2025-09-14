@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeRobot Project | Lixing Zhang</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <ul id="summary">
+
+            <li>
+                <div id="title">
+                    <h1 style="text-align: center;">Warehouse Management System</h1>
+                    <p>A lightweight but fully functional warehouse management system</p>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <div id="main_body">
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+        <h2>Overview of the Project</h2>
+        <ul style="font-weight: bold;">
+            <li><a href="#introduction">Introduction(TODO)</a></li> <!-- The project LeRobot, LeKiWi itself, with links -->
+            <li><a href="#design-architecture">Design &amp; Architecture(TODO)</a></li> <!-- The CAD models, Software architecture, etc. -->
+            <li><a href="#step-by-step-build-up">Step-by-step Build-up</a></li> <!-- Daily progresses go here -->
+            <li><a href="#results-demonstrations">Results &amp; Demonstrations(TODO)</a></li> <!-- Daily show-offs go here -->
+            <li><a href="#future-improvements">Future Improvements(TODO)</a></li> <!-- Open Ideas -->
+        </ul>
+        <hr>
+        <h3 id="introduction">Introduction</h3>
+        <p>
+            This project is done for a good friend of mine, who is running a small business in Germany. 
+            The business is doing pretty well, but the warehouse management is still done manually. 
+            As the business is growing, the manual process is becoming more and more inefficient and error-prone. 
+            Therefore, I decided to help her to develop a lightweight but fully functional warehouse management system.
+        </p>
+        <h3 id="design-architecture">Design &amp; Architecture</h3>
+        <h4> Requirements Analysis</h4>
+        <p>The customer owns 2 small rooms in her own villa, each one as large as 40 m². Currently, all boxes are stacked on the floor, making it difficult to find and access items. 
+            The customer plans to organize the room by implementing a shelving system and a digital inventory management system.</p>
+        <p>The customer wishes to organize the room physically as a library, where each shelf contains a certain number of boxes in the same size, so that the separate spaces could be unified.
+            Following is a good example of the physical organization. Though in our case, it would be smaller in scale.</p>
+        <img src="../multimedia/warehouse_management/example_shelves.jpg" alt="Physical Organization" width="600">
+        <p>The workflow of the warehouse management system can be divided into several key steps:</p>
+        <ol>
+            <li>Packages always arrive as a bundle. They would be kept inside the warehouse as storage units.
+                The manager should of course have a clear overview of what items are inside the warehouse, and where they are located.</li>
+            <li>From time to time, orders would come in form of a list. These should be collected into a parcel and sent out together.</li>
+            <li>On expiring a certain period of time, each single item shall charge a storage fee daily, these should be summed up monthly and presented to the headquater. </li>
+        </ol>
+        <h4> Plan for the system</h4>
+        <p> The warehouse management system should provide following functionalities:</p>
+        <ul>
+            <li><b>Inventory management</b>: Keep track of all items in the warehouse, their quantities, and the corresponding storage box, and other relevant information.</li>
+            <li><b>Receiving management</b>: Handle the arrival of new packages and update the inventory accordingly.</li>
+            <li><b>Order management</b>: Process incoming orders, allocate items from the inventory FIFO.</li>
+            <li><b>Storage fee calculation</b>: Calculate the storage fees daily based on the duration of storage and item type.</li>
+            <li><b>Warehouse Status</b>: Status of each box, including its contents and location.</li>
+        </ul>
+        <p> After discussion with the customer, the following workflows were defined: </p>
+        <p><b>Workflow for Receiving New Packages:</b></p>
+        <ol>
+            <li>Items arrive in packages, each of them has a unique identifier called UUID. The UUID, quantity shall be first fed into the system. (Through a Barcode Scanner/Keyboard)</li>
+            <li>The system would return a list of all boxes that currently stores this item, and how many are still available in each box.</li>
+            <li>The user would then decide which box to put the new items in, approach the box and scan the box's barcode. 
+                It is, however, here preferred to put newcomming items into a new box, so that the FIFO principle can be better maintained.</li>
+            <li>The system would then prompt the user to give in the quantity of items to be added to this box.</li>
+            <li>An automatically generated date, an automatically generated serial_ID, UUID, Delta Quantity, Box ID, user ID would be recorded in the system.</li>
+            <li>Repeat step 3 through 5 until all items are stored or the storage is full.</li>
+            <li>In case of full storage, the system would prompt the user to either remove existing items or allocate a new storage location, otherwise no Receiving would be allowed.</li>
+        </ol>
+        <p><b>Workflow for Processing Orders:</b></p>
+        <ol>
+            <li>Orders are received in the form of a list of item UUIDs and quantities.</li>
+            <li>The system prompts the user to scan a barcode containing UUID, and give in the quantity.</li>
+            <li>The system returns a list of all boxes containing the requested item and their available quantities, ordered by incoming date. (FIFO? TODO)</li>
+            <li>The user would then decide which box to fetch the items from, approach the box and scan the box's barcode.</li>
+            <li>The system would then prompt the user to give in the quantity of items that are fetched from this box.</li>
+            <li>An automatically generated date, an automatically generated serial_ID, UUID, Delta Quantity, Box ID, user ID would be recorded in the system.</li>
+            <li>Repeat step 4 and 5 until all items are fetched or the storage is insufficient.</li>
+            <li>In case of insufficient storage, the system would prompt the user to either cancel the order or adjust the quantity, otherwise no order processing would be allowed.</li>
+        </ol>
+        <p><b>Extra functionalities:</b></p>
+        <ul>
+            <li>An extra list will list out the information of different items, unique to UUID. </li>
+            <li>On scanning a new UUID, the system will prompt the user to enter the information of this item first before continuing workflow 'Receiving New Packages'.</li>
+            <li>An extra list will show the current status of each box, including its contents and location. </li>
+            <li>A monthly report will be generated automatically at the last day of the month, summarizing the storage fees for each item based on its type and duration of storage(how many expired days in this months).</li>
+        </ul>
+
+        <h4> Choosing Software and Hardware</h4>
+        <b>Hardware list:</b>
+        <ul>
+            <li>WLAN-Router with access to internet</li>
+            <li>Barcode Scanner</li>
+            <li>Tablet or Mobile Device for Inventory Management</li>
+            <li>A Raspberry Pi as back-up UI</li>
+            <li>Necessary Cables and Adapters</li>
+            <li>Label Printer for Box Labels & Barcodes</li>
+        </ul>
+        <b>Software list:</b>
+        <ul>
+            <li>Google Sheets as database</li>
+            <li>Google Script for Back-end automation</li>
+        </ul>
+        <p>For now, we are only using Google Sheets and Google Script to manage our inventory. 
+            For future improvements, we may consider more advanced inventory management systems.</p>
+        <h3 id="step-by-step-build-up">Step-by-step Build-up</h3>
+        <ul>
+            <li><strong>2025-06-13:</strong> <a href="../posts/Projects/250914_Design_the_database.md">Designed the database schema in Google Sheets</a></li>
+            <li><strong>2025-06-13:</strong> <a href="../TODO.html">Decide on the hardware specifications and first-round procurement.</a></li>
+        </ul>
+        <h3 id="results-demonstrations">Results &amp; Demonstrations</h3>
+        <p>...</p>
+        <h3 id="future-improvements">Future Improvements</h3>
+        <p>...</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 Lixing Zhang</p>
+        <p>Ingolstadt, Germany</p>
+        <a href="mailto:lexerzhang@gmail.com">lexerzhang@gmail.com</a>
