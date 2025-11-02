@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redesign the RGBD Gimbal for the XLeRobot</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Include marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Additional styles for rendered Markdown content */
+        #markdown-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        #markdown-content h1, #markdown-content h2, #markdown-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        #markdown-content p {
+            margin-bottom: 15px;
+        }
+        #markdown-content ul {
+            margin-bottom: 15px;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul id="summary">
+            <li>
+                <div>
+                    <img src="../../multimedia/Boya_Warehouse/Overview_BoxLeRobot_1.png" alt="BoxLeRobot" style="width: 400px;">
+                </div>
+            </li>
+            <li>
+                <div id="title">
+                    <h1 style="text-align: center;">The Draft of BoxLeRobot</h1>
+                    <p>BoxLeRobot | Engineering Blog</p>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <div id="main_body">
+        <nav>
+            <ul class="menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/Warehouse_Management_System.html">← Back to Warehouse Management System</a></li>
+            </ul>
+        </nav>
+        
+        <!-- This div will contain the rendered Markdown content -->
+        <div id="markdown-content" class="loading">
+            <p>Loading content...</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Lixing Zhang</p>
+        <p>Ingolstadt, Germany</p>
+        <a href="mailto:lexerzhang@gmail.com">lexerzhang@gmail.com</a>
+    </footer>
+
+    <script>
+        // Function to load and render Markdown file
+        function loadMarkdown(markdownFile) {
+            fetch(markdownFile)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Markdown file not found');
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    // Configure marked options
+                    marked.setOptions({
+                        breaks: true,
+                        gfm: true,
+                        headerIds: false,
+                        mangle: false
+                    });
+                    
+                    // Parse and render the Markdown
+                    const htmlContent = marked.parse(text);
+                    document.getElementById('markdown-content').innerHTML = htmlContent;
+                    document.getElementById('markdown-content').classList.remove('loading');
+                })
+                .catch(error => {
+                    document.getElementById('markdown-content').innerHTML = 
+                        '<div class="error"><p>Error loading content: ' + error.message + '</p><p>Make sure the Markdown file exists and the page is served via HTTP/HTTPS (not file://).</p></div>';
+                    document.getElementById('markdown-content').classList.remove('loading');
+                });
+        }
+
+        // Load the Markdown file when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load the Markdown file (same name but .md extension)
+            loadMarkdown('./251102_Draft_of_BoxLeRobot.md');
+        });
+    </script>
+</body>
+</html>
