@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "31eed8a728c235bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6b0fe473dce2de1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2caf6c08a4ba1092",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3D-printing/Upgrading_my_Bambu_Lab_A1_mini_3D-Printer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Upgrading_my_Bambu_Lab_A1_mini_3D-Printer"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "37bc814cd63b9813",
+    "type": "split",
+    "children": [
+      {
+        "id": "75254e07a0f9ee03",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e55565de18510b91",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ac4599e530bb2b4d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a6937360e0358f89",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1f1633c527a7e577",
+    "type": "split",
+    "children": [
+      {
+        "id": "db97529669c26024",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d8c19b7fb146baad",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "3D-printing/Upgrading_my_Bambu_Lab_A1_mini_3D-Printer.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Upgrading_my_Bambu_Lab_A1_mini_3D-Printer"
+            }
+          },
+          {
+            "id": "cc32e960fdc628fa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "3D-printing/Upgrading_my_Bambu_Lab_A1_mini_3D-Printer.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Upgrading_my_Bambu_Lab_A1_mini_3D-Printer"
+            }
+          },
+          {
+            "id": "b30c2a6540c90ebc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e04a890dbee075cb",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ec4927ad17e2a5df",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "3D-printing/Upgrading_my_Bambu_Lab_A1_mini_3D-Printer.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Upgrading_my_Bambu_Lab_A1_mini_3D-Printer"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "2caf6c08a4ba1092",
+  "lastOpenFiles": [
+    "3D-printing/Upgrading_my_Bambu_Lab_A1_mini_3D-Printer.html",
+    "3D-printing/images/Plate_Swap.gif",
+    "3D-printing/images/3_A1_mini_equipped.jpeg",
+    "3D-printing/images/2_A1_mini_Toolboard.jpeg",
+    "3D-printing/images/0_A1_mini_standalone.jpeg",
+    "3D-printing/images/3_A1_mini_equipped.jpg",
+    "3D-printing/images/4_A1_mini_equipped.jpg",
+    "3D-printing/images/1_2_AMSLite_Mount_Design.jpeg",
+    "3D-printing/images/1_3_Spool_Holder_Design.jpeg",
+    "3D-printing/images/1_1_Drilling_Holes.jpeg",
+    "3D-printing/images/1_A1_mini_AMS_Lite.jpeg",
+    "3D-printing/images/3_A1_mini_equipped.HEIC",
+    "create a link.md",
+    "3D-printing/images",
+    "Upgrading my Bambu Lab A1 mini 3D-Printer.md",
+    "3D-printing/Upgrading_my_Bambu_Lab_A1_mini_3D-Printer.md",
+    "3D-printing/Machine_Set-up",
+    "3D-printing",
+    "Welcome.md"
+  ]
+}
